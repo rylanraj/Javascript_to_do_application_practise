@@ -1,3 +1,7 @@
+/*
+This assignment was done together by Ahmed, Rylan and Alvin
+*/
+
 const taskData = [
     {
         title: "First task",
@@ -73,7 +77,7 @@ let create_task = document.getElementById("create_task");
 
 let task_list = document.getElementById("task_list");
 
-
+let save_task = document.getElementById("save_task");
 
 document.addEventListener("DOMContentLoaded", function() {
 
@@ -155,10 +159,21 @@ document.addEventListener("DOMContentLoaded", function() {
             // If it is, open up a model to edit its corresponding task
 
             modal_wrapper.style.display = "block";
+
+            save_task.addEventListener("click", function() {
+                const taskItem = target.closest("li");
+            if (taskItem) {
+                taskItem.remove();
+            }
+
+
+            })
+            /*
             const taskItem = target.closest("li");
             if (taskItem) {
                 taskItem.remove();
             }
+            */
 
 
         }
