@@ -5,8 +5,7 @@
     <title>Todo application</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-    <script src="data.js"></script>
-    <script>console.log(taskData)</script>
+
 </head>
 
 <body>
@@ -30,8 +29,9 @@
                 <h1>All tasks</h1>
                 <h3>2 tasks due, 4 tasks total</h3>
             </header>
+            <button id="create_task" type="button">Create New Task</button>
             <ul id="task_list">
-                <li class="overdue">
+                <li class="overdue" id="t_0">
                     <input type="checkbox" id="task_0">
                     <label for="task_0">First task</label>
                     <p>Description for the first task</p>
@@ -58,19 +58,26 @@
                 </li>
             </ul>
         </section>
+        <section>
         <hr>
-        <section id="new_task">
-            <h3>Create new task</h3>
+            <div id="modal_wrapper">
+                <section id="new_task">
+                    <h3>Create new task</h3>
+                    <form id="modal_contents">
+                        <label for="new_task_title">New Task</label><input type="text" placeholder="Task title" id="new_task_title">
+                        <label for="new_task_description">Description</label><textarea placeholder="Task description" id="new_task_description"></textarea>
+                        <label for="new_task_due_date">Due Date</label><input type="date" id="new_task_due_date">
 
-            <input type="text" placeholder="Task title" id="new_task_title">
-            <textarea placeholder="Task description" id="new_task_description"></textarea>
-            <input type="date" id="new_task_due_date">
+                        <button type="submit" id="save_task">Save task</button>
+                    </form>
+                    <button type="submit" id="close_modal">close modal</button>
+                </section>
+            </div>
 
-            <button type="submit" id="save_task">Save task</button>
-        </section>
 
         </section>
     </main>
+    <script src="data.js"></script>
 </body>
 
 </html>

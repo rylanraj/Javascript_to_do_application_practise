@@ -1,3 +1,41 @@
+#modal_wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    display: none;
+}
+
+#modal_contents{
+    position: relative;
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 1rem;
+}
+
+#new_task{
+    position: relative;
+    width: 50vw;
+    margin: 0 auto;
+    background-color: #fff;
+    z-index: 9999;
+    padding: 1rem;
+
+}
+
+#close_modal{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
 body {
     display: flex;
     flex-direction: column;
