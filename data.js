@@ -30,7 +30,7 @@ const taskData = [
 
 function load_data(starting_data) {
     for (let i = 0; i < starting_data.length; i++) {
-        if (starting_data[i].completed == false) {
+        if (starting_data[i].completed === false) {
         task_list.innerHTML += `
           
                 <li>
@@ -162,23 +162,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
             save_task.addEventListener("click", function() {
                 const taskItem = target.closest("li");
-            if (taskItem) {
-                taskItem.remove();
-            }
-
-
+                if (taskItem) {
+                    taskItem.remove();
+                }
+            
             })
-            /*
-            const taskItem = target.closest("li");
-            if (taskItem) {
-                taskItem.remove();
-            }
-            */
-
-
         }
     });
-
 });
 
 
